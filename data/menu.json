@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Egg Fried Rice",
+    "price": 300,
+    "cat": "Fried Rice",
+    "desc": "Wok-tossed egg fried rice with vegetables & soy sauce",
+    "img": ""
+  },
+  {
+    "id": 2,
+    "name": "Chicken Fried Rice",
+    "price": 350,
+    "cat": "Fried Rice",
+    "desc": "Fragrant fried rice with tender chicken pieces",
+    "img": ""
+  },
+  {
+    "id": 3,
+    "name": "Vegetable Kottu",
+    "price": 280,
+    "cat": "Kottu",
+    "desc": "Classic Sri Lankan kottu with fresh vegetables & spices",
+    "img": ""
+  },
+  {
+    "id": 4,
+    "name": "Chicken Kottu",
+    "price": 350,
+    "cat": "Kottu",
+    "desc": "Crispy roti kottu with spiced chicken",
+    "img": ""
+  },
+  {
+    "id": 5,
+    "name": "Mango Smoothie",
+    "price": 250,
+    "cat": "Others",
+    "desc": "Fresh mango blended with yoghurt & a hint of honey",
+    "img": ""
+  },
+  {
+    "id": 6,
+    "name": "Chocolate Lava Cake",
+    "price": 420,
+    "cat": "Others",
+    "desc": "Warm chocolate cake, molten centre, vanilla ice cream",
+    "img": ""
+  }
+]

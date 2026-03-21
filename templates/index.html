@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a2e1a">
+  <title>C.O.O.King Stores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- MAIN SITE -->
+  <div id="mainSite">
+    <nav>
+      <div class="logo">C.O.O.<span>King</span> Stores</div>
+      <div class="nav-phones" id="navPhones"></div>
+    </nav>
+    <div class="hero">
+      <h1 class="hero-title">Welcome to <em>C.O.O.King</em> Stores</h1>
+    </div>
+    <div class="menu-section">
+      <h2 class="section-title">Our <em>Menu</em></h2>
+      <div class="cat-tabs" id="catTabs"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </div>
+
+  <!-- ADMIN LOGIN -->
+  <div id="adminLogin">
+    <div class="login-box">
+      <div class="login-logo">C.O.O.King Admin</div>
+      <div class="login-sub">Management Portal</div>
+      <div class="login-group">
+        <label>Password</label>
+        <input type="password" id="pwInput" placeholder="Enter admin password">
+      </div>
+      <div class="login-err" id="loginErr"></div>
+      <button class="btn-login" id="btnLogin">Login</button>
+    </div>
+    <button id="btnBackHome">← Back to Site</button>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div id="adminPanel">
+    <div class="admin-nav">
+      <div class="admin-nav-logo">⚙ Admin Panel</div>
+      <div class="admin-nav-right">
+        <button class="btn-outline" id="btnViewSite">View Site</button>
+        <button class="btn-outline btn-danger" id="btnLogout">Logout</button>
+      </div>
+    </div>
+
+    <div class="admin-body">
+      <div class="admin-title">Menu Manager</div>
+      <div class="admin-sub">Add, view and remove food items from the public menu.</div>
+
+      <!-- Phone Numbers -->
+      <div class="add-form">
+        <div class="add-form-title">📞 Phone Numbers</div>
+        <div class="form-row">
+          <div class="fg">
+            <label>Phone Number 1</label>
+            <input type="tel" id="iPhone1" placeholder="+94 77 123 4567">
+          </div>
+          <div class="fg">
+            <label>Phone Number 2 (optional)</label>
+            <input type="tel" id="iPhone2" placeholder="+94 71 123 4567">
+          </div>
+        </div>
+        <button class="btn-add" id="btnSavePhones">Save Phone Numbers</button>
+      </div>
+
+      <!-- Add Menu Item -->
+      <div class="add-form">
+        <div class="add-form-title">+ Add New Item</div>
+        <div class="form-row-3">
+          <div class="fg">
+            <label>Item Name *</label>
+            <input type="text" id="iName" placeholder="e.g. Egg Fried Rice">
+          </div>
+          <div class="fg">
+            <label>Price (LKR) *</label>
+            <input type="number" id="iPrice" placeholder="350" inputmode="numeric">
+          </div>
+          <div class="fg">
+            <label>Category *</label>
+            <select id="iCat">
+              <option value="">Select...</option>
+              <option>Fried Rice</option>
+              <option>Kottu</option>
+              <option>Others</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Description</label>
+          <input type="text" id="iDesc" placeholder="Short description of the dish">
+        </div>
+
+        <!-- IMAGE URL INPUT -->
+        <div class="fg">
+          <label>Food Image URL (optional)</label>
+          <div class="img-url-row">
+            <input type="url" id="iImg" placeholder="https://example.com/food.jpg">
+            <button type="button" class="btn-preview" id="btnPreview">Preview</button>
+          </div>
+          <span class="img-url-hint">💡 Paste any image link — from Google, Imgur, Facebook, etc.</span>
+          <div class="img-preview-wrap" id="imgPreviewWrap" style="display:none;">
+            <img id="imgPreview" src="" alt="Preview" crossorigin="anonymous">
+            <button type="button" class="img-remove-btn" id="imgRemoveBtn">✕ Remove</button>
+          </div>
+        </div>
+
+        <button class="btn-add" id="btnAddItem">Add to Menu</button>
+      </div>
+
+      <!-- Item List -->
+      <div class="admin-list-header">
+        <div class="admin-list-title">Menu Items (<span id="itemCount">0</span>)</div>
+      </div>
+      <div class="admin-table-wrap">
+        <div id="adminListWrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
